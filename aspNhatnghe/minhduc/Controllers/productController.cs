@@ -13,7 +13,7 @@ namespace minhduc.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("showAll2", ProductsList);
         }
         public IActionResult showAll2()
         {
@@ -53,15 +53,29 @@ namespace minhduc.Controllers
             ProductsList.Add(product);
             return View("showAll2", ProductsList);
         }
-
-        public IActionResult Edit(int id)
+        [HttpGet]
+        public IActionResult Edit(int id, Product product)
         {
             //linq
-            Product sp = ProductsList.SingleOrDefault( product => product.ID == id  );
+            Product sp = ProductsList.SingleOrDefault( prod => prod.ID == id  );
             if (sp != null) {
-                return View(sp);
+                sp.Name = product.Name;
+                sp.Price = product.Price;
+                sp.Sale = product.Sale;
             }
-            return RedirectToAction("showAll2");
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            //linq
+            Product sp = ProductsList.SingleOrDefault(product => product.ID == id);
+            if (sp != null)
+            {
+                ProductsList.Remove(sp);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

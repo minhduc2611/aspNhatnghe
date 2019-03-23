@@ -12536,11 +12536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\minhduc\\minhduc\\minhduc.csproj",
+      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\minhduc\\aspNhatnghe\\minhduc\\minhduc.csproj",
       "projectName": "minhduc",
-      "projectPath": "C:\\Users\\NN\\source\\repos\\minhduc\\minhduc\\minhduc.csproj",
+      "projectPath": "C:\\Users\\NN\\source\\repos\\minhduc\\aspNhatnghe\\minhduc\\minhduc.csproj",
       "packagesPath": "C:\\Users\\NN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NN\\source\\repos\\minhduc\\minhduc\\obj\\",
+      "outputPath": "C:\\Users\\NN\\source\\repos\\minhduc\\aspNhatnghe\\minhduc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
