@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using minhduc.Models;
 namespace minhduc.Controllers
 {
-    public class productController : Controller
+    public class ProductController : Controller
     {
         // moi lan chay cai listy nafy se luu lai ==> gan static vao !
         static List<Product> ProductsList = new List<Product>();
@@ -15,7 +15,7 @@ namespace minhduc.Controllers
         {
             return View("showAll2", ProductsList);
         }
-        public IActionResult showAll2()
+        public IActionResult ShowAll2()
         {
             ViewData["Heading"] = " All Products ";
 
@@ -40,12 +40,14 @@ namespace minhduc.Controllers
             });
             return View(ProductsList);
         }
-        public IActionResult create() {
 
-            return View();
+        public IActionResult Create() {
+
+           return View();
         }
+
         [HttpPost]
-        public IActionResult create(Product product)
+        public IActionResult Create(Product product)
         {
             //gia su du lieu hop 
             //them vao list 
@@ -53,7 +55,23 @@ namespace minhduc.Controllers
             ProductsList.Add(product);
             return View("showAll2", ProductsList);
         }
-        [HttpGet]
+
+        // edit 
+
+         public IActionResult Edit(int id)
+        {
+            //LINQ
+            Product sp = ProductsList.SingleOrDefault(
+                p => p.ID == id);
+            if(sp != null)//nếu có
+            {
+                return View("edit",sp);
+            }
+            //chuyển về Action Index
+            return RedirectToAction("Index");
+        }
+        
+        [HttpPost]
         public IActionResult Edit(int id, Product product)
         {
             //linq
