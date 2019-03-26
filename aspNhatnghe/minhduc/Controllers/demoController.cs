@@ -7,8 +7,21 @@ using minhduc.Models;
 
 namespace minhduc.Controllers
 {
+    [Route("demo")]
     public class demoController : Controller // ke thua 
     {
+        [Route("home")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+        [Route("/phone/{phoneName}")]
+        public IActionResult PhoneByName(string phoneName) {
+            // Samsung Galaxy S10 Plus https://localhost:44371/phone/Samsung-Galaxy-S10-Plus-8g
+            phoneName = phoneName.Replace("-"," ");
+            return Content(phoneName);
+        }
+        [Route("hinh-chu-nhat")]
         public IActionResult hinhChuNhat()
         {
             hinhChuNhat hcn = new hinhChuNhat()
