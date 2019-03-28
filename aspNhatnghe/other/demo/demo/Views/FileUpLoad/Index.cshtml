@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    
+    <h1>Up Load File</h1>
+    <div class="row">
+        <div class="col-xs-6">
+        <form  asp-action="UploadFile" asp-controller="FileUpLoad" enctype="multipart/form-data">
+        <div class="form-group">
+        <label>Up Load Single File</label>
+        <input class="form-control" type="file" name="myfile" value=""/>
+        <small id="" class="form-text text-muted"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">up load 1 file</button>
+        </form>
+        </div>
+
+        <div class="col-xs-6">
+        <form asp-action="UploadFiles" asp-controller="FileUpLoad" enctype="multipart/form-data">
+        <div class="form-group">
+        <label>Up Load multiple File</label>
+        <input class="form-control" type="file" name="myfiles" multiple value="" />
+        <small id="" class="form-text text-muted"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">up load 1 file</button>
+        </form>
+        </div>
+    </div>
+</div>
