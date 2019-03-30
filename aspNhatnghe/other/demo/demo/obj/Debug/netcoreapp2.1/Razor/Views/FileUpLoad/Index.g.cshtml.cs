@@ -67,7 +67,7 @@ using demo.Models;
             WriteLiteral("<div class=\"container\">\r\n    \r\n    <h1>Up Load File</h1>\r\n    <div class=\"row\">\r\n        <div class=\"col-xs-6\">\r\n        ");
             EndContext();
             BeginContext(164, 413, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4945acb9ba648759183999e6e208ee4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9ad0e8a03e74475bb21808bf6e5d23cf", async() => {
                 BeginContext(253, 317, true);
                 WriteLiteral(@"
         <div class=""form-group"">
@@ -101,7 +101,7 @@ using demo.Models;
             WriteLiteral("\r\n        </div>\r\n\r\n        <div class=\"col-xs-6\">\r\n        ");
             EndContext();
             BeginContext(637, 426, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44bdb6782efd4583be36f90cca4285a9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48ff7822dd934eeb9675a2ad1417601d", async() => {
                 BeginContext(726, 330, true);
                 WriteLiteral(@"
         <div class=""form-group"">

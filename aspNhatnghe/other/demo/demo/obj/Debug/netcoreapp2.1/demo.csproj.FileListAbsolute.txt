@@ -69,3 +69,5 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\demo.pdb
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\demo.csproj.CopyComplete
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\employeeManage.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\JqueryValidation.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\JqueryValidateEmployee.g.cshtml.cs

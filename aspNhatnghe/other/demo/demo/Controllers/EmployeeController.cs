@@ -48,5 +48,17 @@ namespace demo.Controllers
             return Json(true);
 
         }
+
+
+        // demo 1
+        public IActionResult JqueryValidation()
+        {
+            return View();
+        }
+        //demo2
+        public IActionResult JqueryValidateEmployee()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewData["Title"] = "JqueryValidateEmployee";
+}
+
+<h2>JqueryValidateEmployee</h2>
+
+<form id="form">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label>Ma Sinh Vien </label>
+                <input name="txtMaSinhVien" type="text" class="form-control" placeholder="Ma Sinh Vien">
+                @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+            </div>
+            <div class="form-group">
+                <label>Ho Ten Sinh Vien</label>
+                <input name="txtHoTenSinhVien" type="text" class="form-control" placeholder="Ho Ten Sinh Vien">
+            </div>
+            <div class="form-group">
+                <label>Ngay Sinh </label>
+                <input name="txtNgaySinh" type="date" class="form-control" placeholder="Ngay Sinh">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input name="txtEmail" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label>Xac Nhan Email</label>
+                <input name="txtEmailCheck" type="email" class="form-control" placeholder="Xac Nhan Email">
+            </div>
+            <div class="form-group">
+                <label>Credit Card</label>
+                <input name="txtCreditCard" type="number" class="form-control" placeholder="Credit Card">
+            </div>
+        </div>
+        <div class="col-xs-4">
+
+            <div class="form-group">
+                <label>Hinh Anh</label>
+                <input name="txtHinhAnh" type="text" class="form-control" placeholder="Hinh Anh">
+            </div>
+            <div class="form-group">
+                <label>Diem so</label>
+                <input name="txtDiemso" type="number" class="form-control" placeholder="Diem so">
+            </div>
+            <div class="form-group">
+                <label>He So</label>
+                <input name="txtHeSo" type="number" class="form-control" placeholder="He So">
+            </div>
+            <div class="form-group">
+                <label>Ma Bao Mat</label>
+                <input name="txtMaBaoMat" type="number" class="form-control" placeholder="Ma Bao Mat">
+            </div>
+            <div class="form-group">
+                <label>Thong tin them</label>
+                <textarea name="txtThongTinThem" type="text" class="form-control" placeholder="Thong tin them"></textarea>
+            </div>
+
+        </div>
+        <div class="col-xs-4">
+            <div class="form-check">
+                <input name="txtLoveHusky" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> love husky ?  </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+
+    </div>
+</form>
+@*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+
+
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script>
+        $(function () {
+
+
+            // b1 khai bao ham kiem tra
+            function checkGmail(value, object) {
+                var regex = /^[a-z]+@@gmail.com$/;
+                return regex.test(value);
+            }
+            // b2 khai bao tuoc tinh
+            $.validator.addMethod("gmail", checkGmail, "chua dung dinh dang gmail");
+
+            $("#form").validate({
+                rules:
+                {
+                    txtMaSinhVien: { required: true, minlenght: 5, },
+                    txtHoTenSinhVien: { required: true, minlenght: 5, },
+                    txtNgaySinh: { required: true },
+                    txtEmail: { required: true, email: true, gmail: true },
+                    //txtEmailCheck: { required: true, minlenght: 5, },
+                    //txtCreditCard: { required: true, minlenght: 5, },
+                    //txtHinhAnh: { required: true, minlenght: 5, },
+                    //txtDiemso: { required: true, minlenght: 5, },
+                    //txtHeSo: { required: true, minlenght: 5, },
+                    //txtMaBaoMat: { required: true, minlenght: 5, },
+                    //txtThongTinThem: { required: true, minlenght: 5, },
+                    //txtLoveHusky: { required: true, minlenght: 5, },
+
+                    //txtName: { required: true, minlenght: 5, },
+                    //txtAge: { required: true, digits: true, range: [18, 60] }
+                },
+                message:
+                {
+                    txtMaSinhVien: { required: " fill in this field", minlenght: 5, },
+                    txtHoTenSinhVien: { required: true, minlenght: 5, },
+                    txtNgaySinh: { required: true, Date: true, },
+                    txtEmail: { required: "fill in this field", email: " nhap email vao ", gmail: "nhap gmail vao" },
+
+                    //txtName: { required: "Dien vao Truong nay", minlenght: " ngan nhat la 5 ki tu ", },
+                    //txtAge: { required: "Dien vao Truong nay", digits: "dien vao con so", range: "do tuoi lam viec la tu 18-60" }
+                },
+                wrapper: "small"
+            });
+
+            $("small").addClass("form-text text-danger");
+        });
+    </script>
+}
