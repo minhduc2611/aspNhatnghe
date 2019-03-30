@@ -20,5 +20,33 @@ namespace demo.Controllers
                 ModelState.AddModelError("loi", "khong hop le");
             return View();
         }
+
+        
+        public IActionResult employeeManage()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult employeeManage(Employee Em)
+        {
+            // if (ModelState.IsValid)  ModelState.AddModelError("loi", "khong hop le");
+            return View();
+        }
+
+        public IActionResult CheckEmployeeId(int EmpId)
+        {
+            if (EmpId == null)
+            {
+                return Json(true); //hop le
+            }
+
+            //doan nay check trong database 
+            if (EmpId == 777)
+            {
+                return Json("ma nay co roi");
+            }
+            return Json(true);
+
+        }
     }
 }

@@ -12536,11 +12536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\demo\\demo\\demo.csproj",
+      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\demo\\demo\\demo.csproj",
       "projectName": "demo",
-      "projectPath": "C:\\Users\\NN\\source\\repos\\demo\\demo\\demo.csproj",
+      "projectPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\demo\\demo\\demo.csproj",
       "packagesPath": "C:\\Users\\NN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NN\\source\\repos\\demo\\demo\\obj\\",
+      "outputPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\demo\\demo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
