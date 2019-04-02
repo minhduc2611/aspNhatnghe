@@ -92,12 +92,12 @@
             $("#form").validate({
                 rules:
                 {
-                    txtMaSinhVien: { required: true, minlenght: 5, },
-                    txtHoTenSinhVien: { required: true, minlenght: 5, },
-                    txtNgaySinh: { required: true },
+                    txtMaSinhVien: { required: true, minlength: 5, },
+                    txtHoTenSinhVien: { required: true, minlength: 5, },
+                    txtNgaySinh: { required: true,date: true,},
                     txtEmail: { required: true, email: true, gmail: true },
-                    //txtEmailCheck: { required: true, minlenght: 5, },
-                    //txtCreditCard: { required: true, minlenght: 5, },
+                    txtEmailCheck: { required: true, equalTo: "txtEmail", },
+                    txtCreditCard: { required: true, creditcard: true, },
                     //txtHinhAnh: { required: true, minlenght: 5, },
                     //txtDiemso: { required: true, minlenght: 5, },
                     //txtHeSo: { required: true, minlenght: 5, },
@@ -110,11 +110,12 @@
                 },
                 message:
                 {
-                    txtMaSinhVien: { required: " fill in this field", minlenght: 5, },
-                    txtHoTenSinhVien: { required: true, minlenght: 5, },
-                    txtNgaySinh: { required: true, Date: true, },
+                    txtMaSinhVien: { required: " fill in this field", minlength: "nho nhat 5 ki tu", },
+                    txtHoTenSinhVien: { required: " fill in this field", minlength: "nho nhat 5 ki tu", },
+                    txtNgaySinh: { required: " fill in this field", },
                     txtEmail: { required: "fill in this field", email: " nhap email vao ", gmail: "nhap gmail vao" },
-
+                    txtEmailCheck: { required: " fill in this field", equalTo: " chua giong voi email goc ", },
+                    txtCreditCard: { required: " fill in this field", creditcard: " the credit chua hop le ", },
                     //txtName: { required: "Dien vao Truong nay", minlenght: " ngan nhat la 5 ki tu ", },
                     //txtAge: { required: "Dien vao Truong nay", digits: "dien vao con so", range: "do tuoi lam viec la tu 18-60" }
                 },
