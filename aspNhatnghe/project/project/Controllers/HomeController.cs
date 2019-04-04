@@ -20,7 +20,7 @@ namespace project.Controllers
 
             return View();
         }
-        public IActionResult Project()
+        public IActionResult Product()
         {
 
             return View();

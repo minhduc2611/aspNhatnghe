@@ -25,15 +25,10 @@
 </head>
 <body>
     <div>
-
-        <!--  nav -->
-
-        @{ 
-            string[] TitleName = new string[] { "Index", "About", "Project", "Services", "Team", "Blog", "Contact" };
-        }
+        <!--  navigation start here -->
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Mosaic</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Furniture.com</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="oi oi-menu"></span> Menu
                 </button>
@@ -41,27 +36,22 @@
                     <ul class="navbar-nav ml-auto">
 
                         @{
+                            // database
+                            string[] TitleName = new string[] { "Index", "About", "Product", "Services", "Team", "Blog", "Contact" };
+                            // print
                             foreach (string Title in TitleName)
                             {
                                 <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="@Title" class="nav-link">@Title</a></li>
                             }
                         }
 
-                        @*<li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Project" class="nav-link">Project</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Services" class="nav-link">Services</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Team" class="nav-link">Team</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li>
-                        <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a></li>*@
-
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- END nav -->
+        <!-- END navigation -->
 
-        <!-- breadcrumb -->
+        <!-- breadcrumb  start here -->
         @RenderSection("products_breadcrumb", required: false)
 
         <!-- end breadcrumb -->

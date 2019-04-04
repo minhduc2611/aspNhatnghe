@@ -31,7 +31,7 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.dll
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.pdb
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.csproj.CopyComplete
-C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Project.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Services.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Team.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Blog.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Product.g.cshtml.cs
