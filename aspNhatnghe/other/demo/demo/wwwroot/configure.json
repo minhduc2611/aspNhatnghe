@@ -1,0 +1,16 @@
+{
+  "Message": "ASP.NETcore",
+  "MyConfigs": {
+    "config1": "Nhat Nghe",
+    "config2": 16,
+    "config3": [
+      "0163646261",
+      "0123012392"
+    ]
+  },
+  //Data Source=.;Initial Catalog=MyeStore;Integrated Security=True
+  "ConnectionStrings": {
+    "EStore": "Data Source=.;Initial Catalog=MyeStore;Integrated Security=True",
+    "EStoreOnline": "Server= 119.19.26.227;Database=MyeStore;User Id = nhatnghe;Password:NhatNghe"
+  }
+}

@@ -66,7 +66,7 @@ using demo.Models;
             WriteLiteral("<h2>JqueryValidation</h2>\r\n");
             EndContext();
             BeginContext(81, 753, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f7737051d6745fc85ea3c0211c9ad00", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8d3a17b66c54e128f96af38f142ad8b", async() => {
                 BeginContext(97, 152, true);
                 WriteLiteral("\r\n    <div class=\"form-group\">\r\n        <label>Name </label>\r\n        <input name=\"txtName\" type=\"text\" class=\"form-control\" placeholder=\"Enter name\">\r\n");
                 EndContext();
@@ -107,7 +107,7 @@ using demo.Models;
                 WriteLiteral("\r\n");
                 EndContext();
                 BeginContext(861, 71, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e08a5f2dd347b0b47c310d1c6f2f67", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7db8e10d856a4a07b69f6b34dabcc7ed", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

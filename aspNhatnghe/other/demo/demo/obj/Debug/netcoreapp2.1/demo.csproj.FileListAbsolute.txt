@@ -71,3 +71,7 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\employeeManage.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\JqueryValidation.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Employee\JqueryValidateEmployee.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Home\ReadConfig.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Loai\Index.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Loai\Create.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\demo\demo\obj\Debug\netcoreapp2.1\Razor\Views\Loai\Edit.g.cshtml.cs

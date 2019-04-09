@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using demo.Models;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace demo.Controllers
 {
@@ -14,6 +16,32 @@ namespace demo.Controllers
         {
             return View();
         }
+        public IActionResult ReadConfig()
+        {
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("wwwroot/configure.json");
+            var config = builder.Build();
+
+            ViewBag.Message = config["Message"];
+            ViewBag.Config1 = config["MyConfigs:Config1"];
+            ViewBag.Config2 = config["MyConfigs:Config2"];
+            ViewBag.Config3 = config["MyConfigs:Config3"];
+            ViewBag.ConnectionString = config.GetConnectionString("DefaultConnection");
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult About()
         {

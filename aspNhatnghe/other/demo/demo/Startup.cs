@@ -32,7 +32,9 @@ namespace demo
             });
 
 
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //var chuoiKetNoi = Configuration.GetConnectionString("EStore");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
