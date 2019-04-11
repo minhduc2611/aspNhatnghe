@@ -5,7 +5,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-
+/// <summary>
+/// loai data access layer la classMOdel con cua Dataprovider.
+/// </summary>
 namespace demo.Models
 {
     public class LoaiDataAccessLayer
