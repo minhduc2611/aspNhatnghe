@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Linq.Models.HangHoaView>
+@{
+    ViewData["Title"] = "TimKiem";
+}
+
+<h2>TimKiem</h2>
+
+<form asp-action="TimKiem" method="post">
+
+    Ten Hang Hoa <input type="text" name="TenHH" value="" />
+    Gia Tu <input type="number" name="GiaTu" value="" />
+    Gia Den <input type="number" name="GiaDen" value="" />
+    <button>Tim Kiem</button>
+</form>
+
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>

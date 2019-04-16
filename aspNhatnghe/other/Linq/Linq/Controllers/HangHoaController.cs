@@ -20,7 +20,24 @@ namespace Linq.Controllers
             _context = context;
         }
 
-        
+        public IActionResult TimKiem(string TenHH, double GiaTu, double GiaDen) {
+            //toan tu where cua linq, toan tu lamda
+            var dsHangHoa = _context.HangHoa.AsQueryable();
+            if (!string.IsNullOrEmpty(TenHH)) {
+                dsHangHoa = dsHangHoa.Where(hh => hh.TenHh.Contains(TenHH));
+
+            }
+            dsHangHoa = dsHangHoa.Where(hh => hh.DonGia.Value >= GiaTu && hh.DonGia.Value >= GiaDen);
+            return View(dsHangHoa.Select(hh => new HangHoaView {
+                MaHH = hh.MaHh,
+                TenHH = hh.TenHh,
+                DonGia = hh.DonGia.Value,
+                Hinh = hh.Hinh,
+                Loai = hh.MaLoaiNavigation.TenLoai,
+                NhaCC = hh.MaNccNavigation.TenCongTy
+
+            }));
+        }
 
         // GET: HangHoa
         public async Task<IActionResult> Index()
@@ -110,9 +127,13 @@ namespace Linq.Controllers
         // POST: HangHoa/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+
+        // CO UPLOAD HINH
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa, IFormFile fHinh)
         {
             if (id != hangHoa.MaHh)
             {
@@ -123,6 +144,30 @@ namespace Linq.Controllers
             {
                 try
                 {
+                    //--------------------------HINH---------------------------------------------------  
+                    if (fHinh != null)
+                    {
+                        string fileName = $"_{DateTime.Now.Ticks}{fHinh.FileName}";
+                        string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Hinh", "HangHoa", fileName);
+                        using (var file = new FileStream(path, FileMode.Create))
+                        {
+                            fHinh.CopyTo(file);
+                            // delete file trung 
+
+                            if (hangHoa.Hinh != null) {
+
+                            string oldFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Hinh", "HangHoa", hangHoa.Hinh);
+                                if (System.IO.File.Exists(oldFile))
+                                {
+                                    System.IO.File.Delete(oldFile);
+                                }
+                            }
+                            //cap nhat ten file
+
+                            hangHoa.Hinh = fileName;
+                        }
+                    }
+                    //-----------------------hinhEND-------------------------------------------------
                     _context.Update(hangHoa);
                     await _context.SaveChangesAsync();
                 }
