@@ -67,3 +67,6 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\Details.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\Edit.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\Index.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\TimKiem.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\SanPham\DanhSach.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Linq\Linq\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_hanghoa.g.cshtml.cs

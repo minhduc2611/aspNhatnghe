@@ -1,0 +1,11 @@
+﻿@model HangHoa
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">@Model.TenHh</div>
+                <div class="card-body">
+                    <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/@Model.Hinh" />
+                </div>
+                <div class="card-footer">@Model.DonGia.Value.ToString("#,##0") VND</div>
+            </div>
+        </div>

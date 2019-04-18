@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HangHoa>
+@{
+    ViewData["Title"] = "DanhSach";
+}
+
+<h2>DanhSach</h2>
+
+<div class="row">
+    @foreach (var sanpham in Model)
+    {
+        
+            await Html.RenderPartialAsync("_hanghoa", sanpham);
+
+        
+
+        @*<div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">@sanpham.TenHh</div>
+                <div class="card-body">
+                    <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/@sanpham.Hinh" />
+                </div>
+                <div class="card-footer">@sanpham.DonGia.Value.ToString("#,##0") VND</div>
+            </div>
+        </div>*@
+    }
+</div>
