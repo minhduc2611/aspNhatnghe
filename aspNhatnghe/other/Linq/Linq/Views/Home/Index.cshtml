@@ -1,6 +1,32 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+// list
+@using Microsoft.EntityFrameworkCore;
+@{
+    eStore20Context db = new eStore20Context();
+    List<Loai> ds3LoaiNN = db.Loai.FromSql("SELECT TOP 3 * FROM Loai ORDER BY NEWID()").ToList();
+
+
+}
+
+@foreach (Loai lo in ds3LoaiNN)
+{
+    List<HangHoa> ds5HangHoa = db.HangHoa.FromSql("SELECT TOP 3 * FROM HangHoa ORDER BY NEWID()").ToList();
+    <div class="col-md-4">
+        @lo.TenLoai
+        @foreach (HangHoa sanpham in ds5HangHoa)
+        {
+            <a class="list-group-item">@sanpham.TenHh</a>
+        }
+    </div>
+
+}
+
+
+
+
 @{
     var top5GiamGia = ViewBag.Top5GiamGia;
     var top10NgauNhien = ViewBag.Top10NgauNhien;
@@ -16,7 +42,7 @@
     }
 
 </div>
-    <h2>Top 10 Ngau Nhien</h2>
+<h2>Top 10 Ngau Nhien</h2>
 <div class="row">
 
     @foreach (HangHoa sanpham in top10NgauNhien)
@@ -25,34 +51,42 @@
     }
 </div>
 
-    @*<div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header">Note 10</div>
-                    <div class="card-body">
-                        <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
-                    </div>
-                    <div class="card-footer">$17.000</div>
+
+
+
+
+
+
+
+
+@*<div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">Note 10</div>
+                <div class="card-body">
+                    <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
                 </div>
+                <div class="card-footer">$17.000</div>
             </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header">Note 10</div>
-                    <div class="card-body">
-                        <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
-                    </div>
-                    <div class="card-footer">$17.000</div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">Note 10</div>
+                <div class="card-body">
+                    <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
                 </div>
+                <div class="card-footer">$17.000</div>
             </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header">Note 10</div>
-                    <div class="card-body">
-                        <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
-                    </div>
-                    <div class="card-footer">$17.000</div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">Note 10</div>
+                <div class="card-body">
+                    <img class="img-responsive img-thumbnail" src="~/Hinh/HangHoa/_636910433858313417syrups.jpg" />
                 </div>
+                <div class="card-footer">$17.000</div>
             </div>
-        </div>*@
+        </div>
+    </div>*@
 
 

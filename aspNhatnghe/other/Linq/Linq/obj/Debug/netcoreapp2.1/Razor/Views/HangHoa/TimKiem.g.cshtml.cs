@@ -64,7 +64,7 @@ using Linq.Models;
             WriteLiteral("\r\n<h2>TimKiem</h2>\r\n\r\n");
             EndContext();
             BeginContext(110, 263, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "35a3b13667c24176a525c87122ab6089", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "822e2f024e63436eb30890d038eca16a", async() => {
                 BeginContext(151, 215, true);
                 WriteLiteral("\r\n\r\n    Ten Hang Hoa <input type=\"text\" name=\"TenHH\" value=\"\" />\r\n    Gia Tu <input type=\"number\" name=\"GiaTu\" value=\"\" />\r\n    Gia Den <input type=\"number\" name=\"GiaDen\" value=\"\" />\r\n    <button>Tim Kiem</button>\r\n");
                 EndContext();
@@ -119,7 +119,7 @@ using Linq.Models;
             WriteLiteral("</td>\r\n            <td>");
             EndContext();
             BeginContext(700, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9bef986eee2f4e2aa24a996ca3c1b6c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9bd5c651a41d4488893f4adf13c9c446", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
