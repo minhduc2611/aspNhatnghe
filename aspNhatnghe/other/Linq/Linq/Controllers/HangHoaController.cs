@@ -20,7 +20,7 @@ namespace Linq.Controllers
             _context = context;
         }
 
-        public IActionResult TimKiem(string TenHH, double GiaTu, double GiaDen) {
+        public IActionResult TimKiem(string TenHH, float GiaTu, float GiaDen) {
             //toan tu where cua linq, toan tu lamda
             var dsHangHoa = _context.HangHoa.AsQueryable();
             if (!string.IsNullOrEmpty(TenHH)) {
@@ -38,6 +38,7 @@ namespace Linq.Controllers
 
             }));
         }
+
 
         // GET: HangHoa
         public async Task<IActionResult> Index()
