@@ -1,0 +1,81 @@
+﻿@model IEnumerable<linqCodeFirst.Models.Loai>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a data-toggle="modal" data-target="#myModal" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hinh)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenLoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    <img class="img-responsive img-thumbnail" style="max-height:100px;" src="~/images/Hinh/Loai/@item.Hinh" />
+                    @*tml.DisplayFor(modelItem => item.Hinh)*@
+                </td>
+                <td>
+                    <a data-toggle="modal" data-target="#myModal" asp-route-id="@item.MaLoai" asp-controller="Loai" asp-action="Edit" class="btn btn-info"> <i class='far fa-edit'></i> Edit </a>
+                    <a data-toggle="modal" data-target="#myModal" asp-route-id="@item.MaLoai" asp-controller="Loai" asp-action="Details" class="btn btn-success"> <i class='far fa-file'></i> Details </a>
+                    <a data-toggle="modal" data-target="#myModal" asp-route-id="@item.MaLoai" asp-controller="Loai" asp-action="Delete" class="btn btn-danger"> <i class="fas fa-trash-alt"></i> Delete </a>
+                    @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+ $(function () {
+ //mỗi lần modal ẩn thì remove data trước đó
+ $("#modal-loai").on('hidden.bs.modal', function () {
+ $(this).removeData('bs.modal');
+ });
+ });
+    </script>
+}
