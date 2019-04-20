@@ -12537,11 +12537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\linqCodeFirst\\linqCodeFirst\\linqCodeFirst.csproj",
+      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\linqCodeFirst\\linqCodeFirst\\linqCodeFirst.csproj",
       "projectName": "linqCodeFirst",
-      "projectPath": "C:\\Users\\NN\\source\\repos\\linqCodeFirst\\linqCodeFirst\\linqCodeFirst.csproj",
+      "projectPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\linqCodeFirst\\linqCodeFirst\\linqCodeFirst.csproj",
       "packagesPath": "C:\\Users\\NN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NN\\source\\repos\\linqCodeFirst\\linqCodeFirst\\obj\\",
+      "outputPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\linqCodeFirst\\linqCodeFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

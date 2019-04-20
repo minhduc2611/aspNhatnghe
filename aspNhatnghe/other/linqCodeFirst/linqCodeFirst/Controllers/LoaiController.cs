@@ -70,12 +70,36 @@ namespace linqCodeFirst.Controllers
 
 
 
-        public PartialViewResult Delete(int id)
+        
+
+        public IActionResult Delete(int? id)
         {
-            Loai lo = ctx.Loai.SingleOrDefault(p => p.MaLoai == id);
+            Loai lo = new Loai();
+
+            if (id.HasValue)
+            {
+                //tim dua vao maloai ==> dung sigle or default
+                lo = ctx.Loai.SingleOrDefault(p => p.MaLoai == id);
+            }
+            if (lo == null) // khong tim thay
+            {
+                ViewBag.NoiDung = "Khong tim thay loai theo yeu cau";
+                return PartialView("_thongbao");
+
+            }
             return PartialView(lo);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> ConfirmDelete(int? id)
+        {
+            Loai lo = ctx.Loai.SingleOrDefault(p => p.MaLoai == id);
+            if (lo != null) {
+                ctx.Remove(lo);
+                await ctx.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
+        }
 
     }
 }
