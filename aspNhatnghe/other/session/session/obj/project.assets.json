@@ -12536,11 +12536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\session\\session\\session.csproj",
+      "projectUniqueName": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\session\\session\\session.csproj",
       "projectName": "session",
-      "projectPath": "C:\\Users\\NN\\source\\repos\\session\\session\\session.csproj",
+      "projectPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\session\\session\\session.csproj",
       "packagesPath": "C:\\Users\\NN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NN\\source\\repos\\session\\session\\obj\\",
+      "outputPath": "C:\\Users\\NN\\source\\repos\\aspNhatnghe\\aspNhatnghe\\other\\session\\session\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
