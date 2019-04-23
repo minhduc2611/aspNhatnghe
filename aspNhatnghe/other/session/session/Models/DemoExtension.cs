@@ -17,8 +17,8 @@ namespace session.Models
         public static int TongN(this int N) {
 
             int S = 0;
-            for (int i = 1; 1 <= N; i++) {
-                S += 1;
+            for (int i = 1; i <= N; i++) {
+                S += i;
             } 
 
             return S;

@@ -19,16 +19,20 @@ namespace session.Controllers
     public IActionResult AddToCart(int id) {
             //kiem trong session  da co hang hoa co ma id
             List<CartItem> GioHang = Cart;
-
+            if (GioHang == null ){
+                GioHang = new List<CartItem>(); // gio hang la 1 list
+            };
             //xu ly 
             CartItem item = GioHang.SingleOrDefault(p => p.HangMua.HangHoaId == id );
 
-            if (item != null) //da co
+            if (item != null) //da co roi thi them so luong
             {
                 item.SoLuong++;
             }
             else {//chua co
                 Random rd = new Random();
+                
+                //them item vao gio neu chuwa co
                 item = new CartItem
                 {
                     HangMua = new HangHoa()
@@ -36,8 +40,10 @@ namespace session.Controllers
                         HangHoaId = id,
                         DonGia = rd.Next(100,1000),
                         TenHangHoa = $"Samsung S {rd.Next(10,19)}"
-                    }
+                    },
+                    SoLuong = 1
                 };
+                GioHang.Add(item);
             }
 
             //luu session 
