@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Loai>
+@{
+    ViewData["Title"] = "Default";
+}
+
+<h2>Loai</h2>
+
+<div class="list-group">
+    @foreach (var lo in Model)
+    {
+        <a class="list-group-item" asp-action="DanhSach" asp-controller="HangHoa">
+            @lo.TenLoai
+        </a>
+    }
+</div>
