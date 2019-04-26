@@ -40,7 +40,7 @@ namespace Linq
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //add service context 
             services.AddDbContext<eStore20Context>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("eStore"));
+                options.UseSqlServer(Configuration.GetConnectionString("eStoreMac"));
             });
         }
 
