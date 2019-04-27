@@ -36,9 +36,14 @@ namespace datafirst
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
             services.AddDbContext<MyeStoreContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("MyeStore"));
+                options.UseSqlServer(Configuration.GetConnectionString("MyeStoreMac"));
             });
+            // services.AddDbContext<MyeStoreContext>(options => {
+            //     options.UseSqlServer(Configuration.GetConnectionString("MyeStore"));
+            // });
 
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
