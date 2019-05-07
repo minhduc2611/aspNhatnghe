@@ -64,7 +64,7 @@ using Linq.Models;
             WriteLiteral("</div>\r\n                <div class=\"card-body\">\r\n                    ");
             EndContext();
             BeginContext(204, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a97214f7f1c24cf9974fe75f53c36636", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "93e42fdc7f884e1c83e6ec2e7e26c9a4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
