@@ -30,3 +30,4 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Api\EStoreTemplatev21\obj
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Api\EStoreTemplatev21\obj\Debug\netcoreapp2.1\EStoreTemplatev21.dll
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Api\EStoreTemplatev21\obj\Debug\netcoreapp2.1\EStoreTemplatev21.pdb
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Api\EStoreTemplatev21\obj\Debug\netcoreapp2.1\EStoreTemplatev21.csproj.CopyComplete
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\other\Api\EStoreTemplatev21\obj\Debug\netcoreapp2.1\Razor\Views\Home\trangchu.g.cshtml.cs
