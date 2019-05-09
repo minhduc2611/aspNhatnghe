@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "PhanTrang";
+}
+
+<h2>Phân Trang</h2>
+@section Scripts{ 
+    <script>
+        var page = 0;
+        var totalPage = @ViewBag.TongSoTrang;
+        function loadPage(index) {
+            //lấy data
+            index = parseInt(index);
+            $.ajax({
+                url: "/HangHoa/Load",
+                data: { pageNo: index },
+                success: function (response) {
+                    $("#results").html("");
+                    $("#results").append(response);
+                    page = index;
+                    //update button Trước/Kế
+                    $(".btnPre").attr("data-page", index - 1);
+                    $(".btnNext").attr("data-page", index + 1);
+
+                    isDisable = (page == 0) ? true : false;
+                    $(".btnFirst").attr("disabled", isDisable);
+                    $(".btnPre").attr("disabled", isDisable);
+                    isDisable = (page == totalPage - 1) ? true : false;
+                    $(".btnNext").attr("disabled", isDisable);
+                    $(".btnLast").attr("disabled", isDisable);
+                }
+            });            
+        }
+
+        $(function () {
+            loadPage(0);
+
+            //gắn sự kiện
+            $("button.page").click(function () {
+                var p = $(this).attr("data-page");
+                alert(p);
+                loadPage(p);
+            });
+        });
+    </script>
+}
+<!--Panigation-->
+<div class="pager">
+    <button class="btn btn-primary page btnFirst" type="button" 
+            data-page="0">Đầu</button>
+    <button class="btn btn-primary page btnPre" type="button" 
+            data-page="page-1">Trước</button>
+    <button class="btn btn-primary page btnNext" type="button" 
+            data-page="page+1">Sau</button>
+    <button class="btn btn-primary page btnLast" type="button" 
+            data-page="@(ViewBag.TongSoTrang - 1)">Cuối</button>
+</div>
+
+<div id="results"></div>
+
+

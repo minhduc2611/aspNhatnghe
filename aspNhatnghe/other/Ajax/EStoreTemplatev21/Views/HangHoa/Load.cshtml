@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HangHoaViewModel>
+<style>
+    .hhbox{text-align:center;}
+    .hhbox img{max-width: 150px; max-height: 100px;}
+</style>
+@foreach (var hh in Model)
+{
+    <div class="col-md-4">
+        <div class="panel hhbox">
+            <div class="panel-heading">@hh.TenHH</div>
+            <div class="panel-body">
+                <img src="~/Hinh/HangHoa/@hh.Hinh" />
+            </div>
+            <div class="panel-footer">
+                <div class="col-md-4">
+                    @hh.DonGia.ToString("#,##0") đ
+                </div>
+                <div class="col-md-8 text-right">
+                    <button type="button" class="btn btn-primary btnMua" data-mahh="@hh.MaHH">Mua</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        $(".btnMua").click(function () {
+            var mahh = $(this).attr("data-mahh");
+            alert("Mua : " + mahh);
+            $.ajax({
+                url: "/Cart/AddToCart",
+                data: { id: mahh },
+                success: function (res) {
+                    alert("Số lượng " + res.tongSoLuong + ", tiền: " + res.tongTien);
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Demo tải thêm</h2>
+
+<div class="row" id="results"></div>
+
+<div id="loadingicon">
+    <img src="~/images/loading.png" />
+</div>
+@section Scripts{ 
+    <script>
+        var page = 0;
+        var totalPage = @ViewBag.TongSoTrang;
+
+        function loadMore() {
+            //hiện icon loading
+            $("#loadingicon").show();
+            //lấy data
+            $.ajax({
+                url: "/HangHoa/Load",
+                data: { pageNo: page },
+                success: function (response) {
+                    $("#results").append(response);
+                    page++;
+                }
+            });
+            //ẩn icon loading
+            $("#loadingicon").hide();
+        }
+
+        $(function () {
+            //gọi lần đầu loadmore
+            loadMore();
+
+            //gắn sự kiện scroll để gọi loadmore
+            $(window).scroll(function () {
+                //if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    //nếu còn trang để load
+                    if (page < totalPage - 1) {
+                        loadMore();
+                    }
+                //}
+            });
+        });
+    </script>
+}
+
+
+
