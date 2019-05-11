@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "ImportLoai";
+}
+
+<h2>ImportLoai</h2>
+
+<form method="post" asp-action="ImportLoai" enctype="multipart/form-data" >
+
+    chon file <input type="file" name="fImport"  /> 
+              <button> Import </button>
+
+
+</form>
+
+<h3 class="text-danger">@ViewBag.ThongBao</h3>
