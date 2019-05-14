@@ -33,19 +33,22 @@
                     <span class="oi oi-menu"></span> Menu
                 </button>
                 <div class="collapse navbar-collapse" id="ftco-nav">
-                    <ul class="navbar-nav ml-auto">
+                    @await Component.InvokeAsync("LoaiMenu");
+                    @*<ul class="navbar-nav ml-auto">
 
-                        @{
-                            // database
-                            string[] TitleName = new string[] { "Index", "About", "Product", "Services", "Team", "Blog", "Contact" };
-                            // print
-                            foreach (string Title in TitleName)
-                            {
-                                <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="@Title" class="nav-link">@Title</a></li>
-                            }
-                        }
 
-                    </ul>
+
+                    @{
+            // database
+            string[] TitleName = new string[] { "Index", "About", "Product", "Services", "Team", "Blog", "Contact" };
+            // print
+            foreach (string Title in TitleName)
+            {
+                <li class="nav-item active"><a asp-area="" asp-controller="Home" asp-action="@Title" class="nav-link">@Title</a></li>
+            }
+        }
+
+                    </ul>*@
                 </div>
             </div>
         </nav>

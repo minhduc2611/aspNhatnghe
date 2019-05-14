@@ -35,3 +35,4 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Team.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Blog.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Product.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\LoaiMenu\Default.g.cshtml.cs
