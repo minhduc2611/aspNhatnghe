@@ -5,8 +5,13 @@
 <ul class="navbar-nav ml-auto">
     @foreach (var Title in Model)
     {
+
+    
+
     <li class="nav-item active">
         <a asp-area="" asp-controller="Home" asp-action="@Title.TenLoai" class="nav-link">@Title.TenLoai</a>
     </li>
+
+
     }
 </ul>
