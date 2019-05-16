@@ -36,3 +36,12 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Blog.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Home\Product.g.cshtml.cs
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\LoaiMenu\Default.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_BackEnd.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\HangHoas\Create.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\HangHoas\Delete.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\HangHoas\Details.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\HangHoas\Edit.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\HangHoas\Index.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.g.cshtml.cs
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Loai.g.cshtml.cs

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<project.Models.Datamodels.Loai>;
+
+<select name="MaLoai" class="form-control">
+
+    @{
+        var dsLoai = Model;
+        var LoaiCha = dsLoai.Where(p => p.MaLoaiCha == 0);
+    }
+    @foreach (var lo in LoaiCha)
+    {
+        var dsLoaiCon = dsLoai.Where(p => p.MaLoaiCha == lo.MaLoai);
+        <optgroup label="@lo.TenLoai">
+            @foreach (var con in dsLoaiCon)
+            {
+                <option value="@con.MaLoai">@con.TenLoai</option>
+            }
+        </optgroup>
+    }
+</select>
