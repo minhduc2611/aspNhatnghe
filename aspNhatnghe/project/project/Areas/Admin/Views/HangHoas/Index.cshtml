@@ -12,50 +12,50 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
+        <tr class="d-flex">
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.TenHh)
             </th>
-            <th>
+            <th class="col-1">
                 @Html.DisplayNameFor(model => model.Hinh)
             </th>
-            <th>
+            <th class="col-4">
                 @Html.DisplayNameFor(model => model.MoTa)
             </th>
-            <th>
+            <th class="col-1">
                 @Html.DisplayNameFor(model => model.DonGia)
             </th>
-            <th>
+            <th class="col-2">
                 @Html.DisplayNameFor(model => model.GiamGia)
             </th>
-            <th>
+            <th class="col-1">
                 @Html.DisplayNameFor(model => model.Loai)
             </th>
-            <th></th>
+            <th class="col-1"></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
+        <tr class="d-flex">
+            <td class="col-2">
                 @Html.DisplayFor(modelItem => item.TenHh)
             </td>
-            <td>
-                    <img src="~/Hinh/HangHoa/@item.Hinh" />
+            <td class="col-1">
+                    <img style="max-height: 70px" class="img-resposive img-thumbnails" src="~/Hinh/HangHoa/@item.Hinh" />
             </td>
-            <td>
+            <td class="col-4">
                 @Html.DisplayFor(modelItem => item.MoTa)
             </td>
-            <td>
+            <td class="col-1">
                 @Html.DisplayFor(modelItem => item.DonGia)
             </td>
-            <td>
+            <td class="col-2">
                 @Html.DisplayFor(modelItem => item.GiamGia)
             </td>
-            <td>
+            <td class="col-1">
                 @Html.DisplayFor(modelItem => item.Loai.MaLoai)
             </td>
-            <td>
+            <td class="col-1">
                 <a asp-action="Edit" asp-route-id="@item.MaHh">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.MaHh">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.MaHh">Delete</a>

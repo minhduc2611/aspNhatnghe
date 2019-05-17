@@ -1,13 +1,43 @@
 ﻿<Properties StartupConfiguration="{C2659B90-EFD7-4B91-9392-9A2789AA2A0F}|Default">
   <MonoDevelop.Ide.ItemProperties.project PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="project/Views/Shared/_BackEnd.cshtml">
+    <Files>
+      <File FileName="project/Areas/Admin/Controllers/HangHoasController.cs" Line="82" Column="56" />
+      <File FileName="project/Areas/Admin/Views/Shared/_Loai.cshtml" Line="7" Column="1" />
+      <File FileName="project/Areas/Admin/Views/HangHoas/Create.cshtml" Line="47" Column="1" />
+      <File FileName="project/Areas/Admin/Views/HangHoas/Index.cshtml" Line="29" Column="15" />
+      <File FileName="project/Models/Datamodels/Loai.cs" Line="11" Column="22" />
+      <File FileName="project/Views/Shared/_BackEnd.cshtml" Line="335" Column="15" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="project" expanded="True" selected="True">
-            <Node name="project" expanded="True" />
+          <Node name="project" expanded="True">
+            <Node name="project" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="HangHoas" expanded="True" />
+                    <Node name="Shared" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Components" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Datamodels" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True">
+                  <Node name="_BackEnd.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -8,7 +8,7 @@
     }
     @foreach (var lo in LoaiCha)
     {
-        var dsLoaiCon = dsLoai.Where(p => p.MaLoaiCha == lo.MaLoai);
+        var dsLoaiCon =  dsLoai.Where( p => p.MaLoaiCha == lo.MaLoai);
         <optgroup label="@lo.TenLoai">
             @foreach (var con in dsLoaiCon)
             {

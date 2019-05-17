@@ -53,7 +53,7 @@ namespace project.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai");
-            ViewBag.Loai = (List<Loai>)_context.Loais.ToList();
+            ViewBag.Loai = _context.Loais.ToList();
             return View();
         }
 
@@ -79,11 +79,11 @@ namespace project.Areas.Admin.Controllers
 
                 }
 
-
                 _context.Add(hangHoa);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Loai = _context.Loais.ToList();
             ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
             return View(hangHoa);
         }
