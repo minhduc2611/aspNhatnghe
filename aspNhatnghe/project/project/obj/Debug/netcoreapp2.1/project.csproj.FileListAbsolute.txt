@@ -90,3 +90,4 @@ C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netco
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.pdb
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.csproj.CopyComplete
 C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\project.csprojAssemblyReference.cache
+C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\Index.g.cshtml.cs
