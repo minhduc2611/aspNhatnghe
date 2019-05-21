@@ -71,7 +71,7 @@ using project.Models;
             WriteLiteral("    <li class=\"nav-item active\">\r\n        ");
             EndContext();
             BeginContext(185, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd3e1bbb807b4f288870e5e66f3c4a7a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "71cba231d872412999b9ef2f80769440", async() => {
                 BeginContext(268, 13, false);
 #line 12 "C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\Views\Shared\Components\LoaiMenu\Default.cshtml"
                                                                                      Write(Title.TenLoai);

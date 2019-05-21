@@ -93,7 +93,7 @@ WriteAttributeValue("", 344, lo.TenLoai, 344, 11, false);
             WriteLiteral("                ");
             EndContext();
             BeginContext(435, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "552b4c2e33f84701842cb045a901c090", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "845ffd70991e4875ac705d13624bf7e9", async() => {
                 BeginContext(464, 11, false);
 #line 15 "C:\Users\NN\source\repos\aspNhatnghe\aspNhatnghe\project\project\Areas\Admin\Views\Shared\_Loai.cshtml"
                                        Write(con.TenLoai);

@@ -14,10 +14,16 @@ namespace project.Models.DataModels
         [Key]
         [Display(Name = "Mã hàng hóa")]
         public int MaHh { get; set; }
+
         [Display(Name = "Tên hàng hóa")]
         [Required(ErrorMessage = "*")]
         [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự")]
         public string TenHh { get; set; }
+
+        [Display(Name = "Tên khong dau")]
+        [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự")]
+        public string TenKhongDau { get; set; }
+
         [Display(Name = "Hình")]
         [MaxLength(150, ErrorMessage = "Tối đa 150 kí tự")]
         public string Hinh { get; set; }

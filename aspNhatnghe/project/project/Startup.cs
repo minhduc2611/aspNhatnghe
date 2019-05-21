@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using project.Models.Datamodels;
-
+using AutoMapper;
 namespace project
 {
     public class Startup
@@ -39,6 +39,7 @@ namespace project
             services.AddDbContext<MyDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("eStoreWin"));
             });
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

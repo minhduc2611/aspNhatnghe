@@ -62,23 +62,15 @@ namespace project.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHh,TenHh,Hinh,MoTa,DonGia,GiamGia,MaLoai")] HangHoa hangHoa,IFormFile fHinh )
+        public async Task<IActionResult> Create([Bind("MaHh,TenHh,Hinh,MoTa,DonGia,GiamGia,MaLoai,TenKhongDau")] HangHoa hangHoa,IFormFile fHinh )
         {
             if (ModelState.IsValid)
             {
-                //if (fHinh != null) {
-                //    string fullPath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "Hinh", "HangHoa", fHinh.FileName);
-                //    using (var file = new FileStream(fullPath, FileMode.Create))
-                //    {
-                //        fHinh.CopyTo(file);
-                //        hangHoa.Hinh = fHinh.FileName;
-                //    }
-                //}
                 if (fHinh != null) {
                     hangHoa.Hinh = MyTools.Upload(fHinh,"HangHoa");
 
                 }
-
+                hangHoa.TenKhongDau = MyTools.ConvertToUrlFriendly(hangHoa.TenHh);
                 _context.Add(hangHoa);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -86,7 +78,7 @@ namespace project.Areas.Admin.Controllers
             ViewBag.Loai = _context.Loais.ToList();
             ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
             return View(hangHoa);
-        }
+       }
 
         // GET: Admin/HangHoas/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -121,12 +113,8 @@ namespace project.Areas.Admin.Controllers
             {
                 try
                 {
-                    if (fHinh == null)
+                    if (fHinh != null)
                     {   //hinh
-                        
-                        
-                    }
-                    else {
                         hangHoa.Hinh = MyTools.Upload(fHinh, "HangHoa");
                     }
                     

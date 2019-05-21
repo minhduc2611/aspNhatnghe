@@ -18,6 +18,10 @@ namespace project.Models.Datamodels
         [Display(Name = "Ten Loai")]
         public string TenLoai { get; set; }
 
+        [Display(Name = "Tên khong dau")]
+        [MaxLength(50, ErrorMessage = "Tối đa 50 kí tự")]
+        public string TenKhongDau { get; set; }
+
         [Display(Name = "Mo TA")]
         public string MoTa { get; set; }
 
