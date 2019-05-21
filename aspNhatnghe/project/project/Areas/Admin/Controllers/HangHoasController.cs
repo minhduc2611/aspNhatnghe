@@ -110,7 +110,7 @@ namespace project.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,Hinh,MoTa,DonGia,GiamGia,MaLoai")] HangHoa hangHoa)
+        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,Hinh,MoTa,DonGia,GiamGia,MaLoai")] HangHoa hangHoa,IFormFile fHinh)
         {
             if (id != hangHoa.MaHh)
             {
@@ -121,6 +121,15 @@ namespace project.Areas.Admin.Controllers
             {
                 try
                 {
+                    if (fHinh == null)
+                    {   //hinh
+                        
+                        
+                    }
+                    else {
+                        hangHoa.Hinh = MyTools.Upload(fHinh, "HangHoa");
+                    }
+                    
                     _context.Update(hangHoa);
                     await _context.SaveChangesAsync();
                 }

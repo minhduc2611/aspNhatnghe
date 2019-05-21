@@ -37,7 +37,7 @@ namespace project
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<MyDbContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("eStoreMac"));
+                options.UseSqlServer(Configuration.GetConnectionString("eStoreWin"));
             });
         }
 
